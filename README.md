@@ -48,10 +48,17 @@ return 0; }
 
 
 ## OUTPUT
+```
+$ ./pidcheck.o 
+The process id: 6919
+The process id of parent function: 6860
 
-<img width="540" alt="os-1-1" src="https://github.com/user-attachments/assets/169935fe-dd6a-4ca2-afe0-8e81a13dd985">
 
-
+$ ps 
+    PID TTY          TIME CMD
+   6860 pts/0    00:00:00 bash
+   6924 pts/0    00:00:00 ps
+```
 
 ## C Program to create new process using Linux API system calls fork() and exit()
 
@@ -88,7 +95,12 @@ exit(0);}
 
 ## OUTPUT
 
-<img width="544" alt="os -1" src="https://github.com/user-attachments/assets/ea077baf-3873-484f-bf4d-bcab6166fae8">
+```
+$ ./forkcheck.o 
+I am parent, my pid is 7029
+Iam child my pid is 7030
+My parent pid is:7029
+```
 
 
 ## C Program to execute Linux system commands using Linux API system calls exec() family
@@ -118,10 +130,11 @@ printf("Done.\n");
 exit(0);}
 ```
 ## OUTPUT
-
-<img width="478" alt="os-1-11" src="https://github.com/user-attachments/assets/915aa7d1-6da4-4aff-a156-a3fc45ccb4d7">
-
-
+```
+$ ./execcheck2.o 
+Running ps with execlp
+child exited with status of 0
+```
 
 # RESULT:
 The programs are executed successfully.
